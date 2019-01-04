@@ -62,13 +62,20 @@ namespace Nayb_Game_UI
             dgvQuests.Columns.Add(new DataGridViewTextBoxColumn
             {
                 HeaderText = "Name",
-                Width = 209,
+                Width = 150,
                 DataPropertyName = "Name"
             });
 
             dgvQuests.Columns.Add(new DataGridViewTextBoxColumn
             {
-                HeaderText = "Done?",
+                HeaderText = "Required",
+                Width = 100,
+                DataPropertyName = "Requirement"
+            });
+
+            dgvQuests.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                HeaderText = "Done",
                 DataPropertyName = "IsCompleted"
             });
 

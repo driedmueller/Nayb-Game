@@ -85,8 +85,8 @@ namespace Engine
 
         public static Player CreateDefaultPlayer()
         {
-            Player player = new Player(10, 10, 20, 0);
-            player.Inventory.Add(new InventoryItem(World.ItemByID(World.ITEM_ID_RUSTY_SWORD), 1));
+            Player player = new Player(10, 10, 10, 0);
+            player.Inventory.Add(new InventoryItem(World.ItemByID(World.ITEM_ID_POINTY_STICK), 1));
             player.CurrentLocation = World.LocationByID(World.LOCATION_ID_CAMPSITE);
 
             return player;
@@ -98,7 +98,7 @@ namespace Engine
             {
                 XmlDocument playerData = new XmlDocument();
 
-                //playerData.LoadXml(xmlPlayerData);
+                playerData.LoadXml(xmlPlayerData);
 
                 int currentHitPoints = Convert.ToInt32(
                     playerData.SelectSingleNode("/Player/Stats/CurrentHitPoints").InnerText);
@@ -277,6 +277,7 @@ namespace Engine
                 // Player doesn't have item; add it
                 Inventory.Add(new InventoryItem(itemToAdd, quantity));
             }
+            else if (itemToAdd.Name == "Trident") { }
             else
             {
                 // Player has it, so increase quantity
@@ -311,6 +312,7 @@ namespace Engine
             {
                 RaiseMessage("You must have a " + newLocation.ItemRequiredToEnter.Name +
                     " to enter this location.");
+                RaiseMessage("");
                 return;
             }
 
@@ -352,7 +354,7 @@ namespace Engine
                             RaiseMessage(newLocation.QuestAvailableHere.RewardGold.ToString() + " gold");
                             RaiseMessage(newLocation.QuestAvailableHere.RewardExperiencePoints.ToString() + " experience points");
                             RaiseMessage(newLocation.QuestAvailableHere.RewardItem.Name);
-                            RaiseMessage(Environment.NewLine);
+                            //RaiseMessage("");
 
                             AddExperiencePoints(newLocation.QuestAvailableHere.RewardExperiencePoints);
                             Gold += newLocation.QuestAvailableHere.RewardGold;
@@ -496,7 +498,7 @@ namespace Engine
 
                 // Display message
                 RaiseMessage("The " + _currentMonster.Name + " did " + damageToPlayer + " points of damage.");
-                RaiseMessage("");
+                //RaiseMessage("");
 
                 // Subtract damage from player
                 CurrentHitPoints -= damageToPlayer;
@@ -505,7 +507,8 @@ namespace Engine
                 {
                     // Display message
                     RaiseMessage("The " + _currentMonster.Name + " killed you.");
-                    RaiseMessage("");
+                    RaiseMessage("Your friends find you bloody and beaten. They take you back to the campsite.");
+                    //RaiseMessage("");
 
                     // Move player to "Home"
                     MoveHome();

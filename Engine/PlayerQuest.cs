@@ -29,12 +29,18 @@ namespace Engine
                 _isCompleted = value;
                 OnPropertyChanged("IsCompleted");
                 OnPropertyChanged("Name");
+                OnPropertyChanged("Requirement");
             }
         }
 
         public string Name
         {
             get { return Details.Name; }
+        }
+
+        public string Requirement
+        {
+            get { return Details.Requirement; }
         }
 
         public PlayerQuest(Quest details)

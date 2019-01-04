@@ -56,6 +56,8 @@
             this.btnTrade = new System.Windows.Forms.Button();
             this.lblInventory = new System.Windows.Forms.Label();
             this.lblQuests = new System.Windows.Forms.Label();
+            this.lblLocation = new System.Windows.Forms.Label();
+            this.lblMessages = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuests)).BeginInit();
             this.SuspendLayout();
@@ -135,7 +137,7 @@
             // lblSelectAction
             // 
             this.lblSelectAction.AutoSize = true;
-            this.lblSelectAction.Location = new System.Drawing.Point(629, 440);
+            this.lblSelectAction.Location = new System.Drawing.Point(623, 567);
             this.lblSelectAction.Name = "lblSelectAction";
             this.lblSelectAction.Size = new System.Drawing.Size(70, 13);
             this.lblSelectAction.TabIndex = 8;
@@ -145,7 +147,7 @@
             // 
             this.cboWeapons.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboWeapons.FormattingEnabled = true;
-            this.cboWeapons.Location = new System.Drawing.Point(462, 461);
+            this.cboWeapons.Location = new System.Drawing.Point(456, 588);
             this.cboWeapons.Name = "cboWeapons";
             this.cboWeapons.Size = new System.Drawing.Size(142, 21);
             this.cboWeapons.TabIndex = 9;
@@ -154,14 +156,14 @@
             // 
             this.cboPotions.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboPotions.FormattingEnabled = true;
-            this.cboPotions.Location = new System.Drawing.Point(462, 491);
+            this.cboPotions.Location = new System.Drawing.Point(456, 618);
             this.cboPotions.Name = "cboPotions";
             this.cboPotions.Size = new System.Drawing.Size(142, 21);
             this.cboPotions.TabIndex = 10;
             // 
             // btnUseWeapon
             // 
-            this.btnUseWeapon.Location = new System.Drawing.Point(626, 461);
+            this.btnUseWeapon.Location = new System.Drawing.Point(620, 588);
             this.btnUseWeapon.Name = "btnUseWeapon";
             this.btnUseWeapon.Size = new System.Drawing.Size(75, 23);
             this.btnUseWeapon.TabIndex = 11;
@@ -171,7 +173,7 @@
             // 
             // btnUsePotion
             // 
-            this.btnUsePotion.Location = new System.Drawing.Point(626, 491);
+            this.btnUsePotion.Location = new System.Drawing.Point(620, 618);
             this.btnUsePotion.Name = "btnUsePotion";
             this.btnUsePotion.Size = new System.Drawing.Size(75, 23);
             this.btnUsePotion.TabIndex = 12;
@@ -181,7 +183,7 @@
             // 
             // btnNorth
             // 
-            this.btnNorth.Location = new System.Drawing.Point(493, 339);
+            this.btnNorth.Location = new System.Drawing.Point(487, 466);
             this.btnNorth.Name = "btnNorth";
             this.btnNorth.Size = new System.Drawing.Size(75, 23);
             this.btnNorth.TabIndex = 13;
@@ -191,7 +193,7 @@
             // 
             // btnEast
             // 
-            this.btnEast.Location = new System.Drawing.Point(553, 368);
+            this.btnEast.Location = new System.Drawing.Point(547, 495);
             this.btnEast.Name = "btnEast";
             this.btnEast.Size = new System.Drawing.Size(75, 23);
             this.btnEast.TabIndex = 14;
@@ -201,7 +203,7 @@
             // 
             // btnSouth
             // 
-            this.btnSouth.Location = new System.Drawing.Point(493, 397);
+            this.btnSouth.Location = new System.Drawing.Point(487, 524);
             this.btnSouth.Name = "btnSouth";
             this.btnSouth.Size = new System.Drawing.Size(75, 23);
             this.btnSouth.TabIndex = 15;
@@ -211,7 +213,7 @@
             // 
             // btnWest
             // 
-            this.btnWest.Location = new System.Drawing.Point(436, 368);
+            this.btnWest.Location = new System.Drawing.Point(430, 495);
             this.btnWest.Name = "btnWest";
             this.btnWest.Size = new System.Drawing.Size(75, 23);
             this.btnWest.TabIndex = 16;
@@ -221,7 +223,8 @@
             // 
             // rtbLocation
             // 
-            this.rtbLocation.Location = new System.Drawing.Point(347, 520);
+            this.rtbLocation.BackColor = System.Drawing.SystemColors.Info;
+            this.rtbLocation.Location = new System.Drawing.Point(347, 20);
             this.rtbLocation.Name = "rtbLocation";
             this.rtbLocation.ReadOnly = true;
             this.rtbLocation.Size = new System.Drawing.Size(360, 105);
@@ -230,10 +233,11 @@
             // 
             // rtbMessages
             // 
-            this.rtbMessages.Location = new System.Drawing.Point(347, 17);
+            this.rtbMessages.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rtbMessages.Location = new System.Drawing.Point(347, 153);
             this.rtbMessages.Name = "rtbMessages";
             this.rtbMessages.ReadOnly = true;
-            this.rtbMessages.Size = new System.Drawing.Size(360, 286);
+            this.rtbMessages.Size = new System.Drawing.Size(360, 273);
             this.rtbMessages.TabIndex = 18;
             this.rtbMessages.Text = "";
             // 
@@ -273,7 +277,7 @@
             // 
             // labelSouth
             // 
-            this.labelSouth.Location = new System.Drawing.Point(493, 423);
+            this.labelSouth.Location = new System.Drawing.Point(487, 550);
             this.labelSouth.Name = "labelSouth";
             this.labelSouth.Size = new System.Drawing.Size(75, 34);
             this.labelSouth.TabIndex = 21;
@@ -282,7 +286,7 @@
             // 
             // labelEast
             // 
-            this.labelEast.Location = new System.Drawing.Point(634, 363);
+            this.labelEast.Location = new System.Drawing.Point(628, 490);
             this.labelEast.Name = "labelEast";
             this.labelEast.Size = new System.Drawing.Size(65, 34);
             this.labelEast.TabIndex = 22;
@@ -291,7 +295,7 @@
             // 
             // labelWest
             // 
-            this.labelWest.Location = new System.Drawing.Point(365, 363);
+            this.labelWest.Location = new System.Drawing.Point(359, 490);
             this.labelWest.Name = "labelWest";
             this.labelWest.Size = new System.Drawing.Size(65, 34);
             this.labelWest.TabIndex = 23;
@@ -300,7 +304,7 @@
             // 
             // labelNorth
             // 
-            this.labelNorth.Location = new System.Drawing.Point(493, 302);
+            this.labelNorth.Location = new System.Drawing.Point(487, 429);
             this.labelNorth.Name = "labelNorth";
             this.labelNorth.Size = new System.Drawing.Size(75, 34);
             this.labelNorth.TabIndex = 24;
@@ -309,7 +313,7 @@
             // 
             // btnTrade
             // 
-            this.btnTrade.Location = new System.Drawing.Point(626, 414);
+            this.btnTrade.Location = new System.Drawing.Point(620, 541);
             this.btnTrade.Name = "btnTrade";
             this.btnTrade.Size = new System.Drawing.Size(75, 23);
             this.btnTrade.TabIndex = 21;
@@ -335,11 +339,31 @@
             this.lblQuests.TabIndex = 26;
             this.lblQuests.Text = "Quests:";
             // 
-            // SuperAdventure
+            // lblLocation
+            // 
+            this.lblLocation.AutoSize = true;
+            this.lblLocation.Location = new System.Drawing.Point(344, 4);
+            this.lblLocation.Name = "lblLocation";
+            this.lblLocation.Size = new System.Drawing.Size(51, 13);
+            this.lblLocation.TabIndex = 27;
+            this.lblLocation.Text = "Location:";
+            // 
+            // lblMessages
+            // 
+            this.lblMessages.AutoSize = true;
+            this.lblMessages.Location = new System.Drawing.Point(344, 137);
+            this.lblMessages.Name = "lblMessages";
+            this.lblMessages.Size = new System.Drawing.Size(58, 13);
+            this.lblMessages.TabIndex = 28;
+            this.lblMessages.Text = "Messages:";
+            // 
+            // NaybGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(719, 652);
+            this.Controls.Add(this.lblMessages);
+            this.Controls.Add(this.lblLocation);
             this.Controls.Add(this.lblQuests);
             this.Controls.Add(this.lblInventory);
             this.Controls.Add(this.btnTrade);
@@ -368,13 +392,14 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Nayb Adventure";
+            this.Name = "NaybGame";
             this.Text = "NaybGame";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SuperAdventure_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuests)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion
@@ -407,6 +432,8 @@
         private System.Windows.Forms.Button btnTrade;
         private System.Windows.Forms.Label lblInventory;
         private System.Windows.Forms.Label lblQuests;
+        private System.Windows.Forms.Label lblLocation;
+        private System.Windows.Forms.Label lblMessages;
     }
 }
 

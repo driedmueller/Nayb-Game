@@ -48,7 +48,7 @@ namespace Nayb_Game_UI
             dgvMyItems.Columns.Add(new DataGridViewTextBoxColumn
             {
                 HeaderText = "Qty",
-                Width = 30 + 10,
+                Width = 30 + 8,
                 DefaultCellStyle = rightAlignedCellStyle,
                 DataPropertyName = "Quantity"
             });
@@ -56,7 +56,7 @@ namespace Nayb_Game_UI
             dgvMyItems.Columns.Add(new DataGridViewTextBoxColumn
             {
                 HeaderText = "Price",
-                Width = 35 + 10,
+                Width = 35 + 8,
                 DefaultCellStyle = rightAlignedCellStyle,
                 DataPropertyName = "Price"
             });
@@ -97,7 +97,7 @@ namespace Nayb_Game_UI
             dgvVendorItems.Columns.Add(new DataGridViewTextBoxColumn
             {
                 HeaderText = "Qty",
-                Width = 30 + 10,
+                Width = 30 + 8,
                 DefaultCellStyle = rightAlignedCellStyle,
                 DataPropertyName = "Quantity"
             });
@@ -105,7 +105,7 @@ namespace Nayb_Game_UI
             dgvVendorItems.Columns.Add(new DataGridViewTextBoxColumn
             {
                 HeaderText = "Price",
-                Width = 35 + 10,
+                Width = 35 + 8,
                 DefaultCellStyle = rightAlignedCellStyle,
                 DataPropertyName = "Price"
             });
@@ -145,6 +145,7 @@ namespace Nayb_Game_UI
                 {
                     // Remove one of these items from the player's inventory
                     _currentPlayer.RemoveItemFromInventory(itemBeingSold);
+                    _currentPlayer.CurrentLocation.VendorWorkingHere.AddItemToInventory(itemBeingSold);
 
                     // Give the player the gold for the item being sold
                     _currentPlayer.Gold += itemBeingSold.Price;
